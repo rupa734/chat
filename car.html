@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Range Rover Landing Page</title>
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body, html {height: 100%; font-family: Arial, sans-serif; color: white; overflow-x: hidden;}
+
+    /* 3D Background */
+    #bg {position: fixed; top:0; left:0; width:100%; height:100%; z-index:-1;}
+
+    header {
+      position: fixed; top: 0; left: 0; width: 100%;
+      padding: 15px 40px;
+      background: rgba(0,0,0,0.4);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    header nav a {color: white; text-decoration: none; margin-left: 20px; font-weight: bold;}
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh; display: flex; flex-direction: column;
+      justify-content: center; align-items: center; text-align: center;
+      padding: 0 20px;
+    }
+    .hero h1 {font-size: 3rem; margin-bottom: 15px;}
+    .hero p {font-size: 1.2rem; margin-bottom: 20px;}
+    .hero-btn { color: black; padding: 12px 20px;
+          border-radius: 8px; text-decoration: none; font-weight: bold;}
+    .hero-img {width:100%; border-radius:12px; margin-top:20px;}
+
+    /* Features Section */
+    .features {padding: 60px 20px; background: rgba(0,0,0,0.6);
+               display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+               gap: 20px; text-align: center;}
+    .card {padding: 20px; background: rgba(255,255,255,0.1); border-radius: 12px;}
+
+    /* Gallery */
+    .gallery {padding: 60px 20px; text-align:center; background:rgba(0,0,0,0.6);}
+    .gallery h2 {margin-bottom:20px;}
+    .gallery-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+                   gap:15px;}
+    .gallery-grid img {width:100%; border-radius:10px;}
+
+    /* Video Section */
+    .video {padding: 60px 20px; text-align:center; background:rgba(0,0,0,0.6);}
+    .video iframe, .video video {max-width:90%; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,.5);}
+
+    footer {background: rgba(0,0,0,0.6); text-align: center; padding: 15px;}
+    img {
+  transition: transform 0.3s ease;
+}
+.button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-btn {
+       /* Centers the button horizontally */
+  text-align: center;
+  background: #bfa27a;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #a68e5a;        /* Optional: Slight color change on hover */
+}
+
+
+img:hover {
+  transform: scale(1.05); /* Scales image to 105% of its size on hover */
+}
+h1,h3{
+  font-weight: bolder;
+}
+
+h3,p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+  </style>
+</head>
+<body>
+
+  <!-- 3D Background -->
+  <canvas id="bg"></canvas>
+
+  <!-- Navigation -->
+  <header>
+    <div class="logo">Range Rover</div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#video">Video</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Range Rover — Luxury Redefined</h1>
+    <p>Power. Comfort. Technology.</p>
+    <!-- Insert Car Hero Image -->
+          <img class="hero-img" src="https://media.production.jlrms.com/styles/hero_crop/s3/2024-04-03/image/0f70b326-770f-4c3f-bb17-504413fa68a9/RRS_25MY_STEALTH_040424_03.jpg?VersionId=R7YXrR0Drkhk1DgrgIEx5Gk8rz8SoOLE&h=700ae854&itok=44wwWy0d">
+
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features">
+    <div class="card"><h3>Luxury Interior</h3><p>Fine leather & ambient lighting</p></div>
+    <div class="card"><h3>Off-road Tech</h3><p>Terrain Response & AWD</p></div>
+    <div class="card"><h3>Safety</h3><p>Driver aids & 360° cameras</p></div>
+    <div class="card"><h3>Infotainment</h3><p>Dual screens & premium audio</p></div>
+  </section>
+
+  <div class="button-container">
+      <a class="hero-btn" href="#contact" >Book Test Drive</a>
+
+  </div>
+
+
+  <!-- Gallery -->
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoiUFoUj4w3Vc2Ypl6yf1lq5cUzA0_vYpihA&s" alt="Range Rover front view">
+      <img src="https://i.pinimg.com/736x/43/3a/2a/433a2af8dc20518d2c95064b2e1f4be7.jpg" alt="Range Rover Interior">
+      <img src="https://img.autocarindia.com/Galleries/20250702015541_RRS_SV_Black_Hero_11_1_.jpg?w=736&h=488&q=75&c=1" alt="Range Rover back view">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFwjOXVv7EID-SMVvLAbUuQEuF4VW1DPNTpQ&s" alt="Range Rover back view">
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section id="video" class="video">
+    <h2>Promo Video</h2>
+
+    <!-- Option A: YouTube Embed -->
+<iframe width="800" height="450"
+  src="https://www.youtube.com/embed/NbXmGjD33P8?rel=0"
+  title="Range Rover Promo Video" frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+
+
+    <br><br>
+
+    <!-- Option B: Local Video
+    <video controls width="800" preload="metadata">
+      <source src="Range rover.html" type="video/mp4">
+      <source src="videos/rangerover.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video> -->
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>© 2025 Your Name — Range Rover Showcase</p>
+  </footer>
+
+  <!-- Three.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.141.0/build/three.min.js"></script>
+  <script>
+    // Setup scene
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({canvas: document.querySelector('#bg')});
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    // Add rotating 3D shape
+    const geometry = new THREE.TorusKnotGeometry(10, 3, 100, 16);
+    const material = new THREE.MeshStandardMaterial({ color: 0xbfa27a, metalness: 0.7, roughness: 0.2 });
+    const torusKnot = new THREE.Mesh(geometry, material);
+    scene.add(torusKnot);
+
+    // Lighting
+    const pointLight = new THREE.PointLight(0xffffff);
+    pointLight.position.set(20, 20, 20);
+    scene.add(pointLight);
+
+    // Camera
+    camera.position.z = 40;
+
+    // Animate
+    function animate() {
+      requestAnimationFrame(animate);
+      torusKnot.rotation.x += 0.01;
+      torusKnot.rotation.y += 0.01;
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    // Resize fix
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  </script>
+</body>
+</html>
